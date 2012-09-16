@@ -50,7 +50,7 @@ public class CalculatorGrammar extends Grammar {
 	public final Parser group = seq(str('('), expr, str(')')).separatedBy(
 			opt(ws));
 	{
-		expr.optionFor(cho(decimal, addition, subtraction, multiplication,
+		expr.set(cho(decimal, addition, subtraction, multiplication,
 				division, group));
 	}
 
